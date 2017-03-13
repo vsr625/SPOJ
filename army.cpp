@@ -20,7 +20,7 @@ int main()
 			if(temp > maxm) maxm=temp;
 		}
 		if(maxm > maxg)
-			cout << "MechaGozilla" << "\n";
+			cout << "MechaGodzilla" << "\n";
 		else
 			cout << "Godzilla" << "\n";
 	}
