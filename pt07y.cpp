@@ -21,14 +21,15 @@ int main()
 	int arr[n][n];
 	memset(arr, 0, sizeof(arr));
 	memset(v, 0, sizeof(v));
-	for (int i = 0; i < m ; i++) {
-		int temp1, temp;
-		cin>>temp1>>temp;
-		arr[temp1-1][temp-1]=1;
-		arr[temp-1][temp1-1]=1;
+	if(m == n-1){
+		for (int i = 0; i < m ; i++) {
+			int temp1, temp;
+			cin>>temp1>>temp;
+			arr[temp1-1][temp-1]=1;
+			arr[temp-1][temp1-1]=1;
+		}
+		cycle((int *)arr, n, v, 0);
 	}
-	if(m<n)
-	cycle((int *)arr, n, v, 0);
 	if (no!=n) {
 		cout << "NO" << "\n";
 	}
